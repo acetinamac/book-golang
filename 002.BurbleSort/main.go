@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type Ordered interface {
 	~float64 | ~int | ~string
 }
@@ -19,6 +21,9 @@ func main() {
 	// Example usage
 	ints := []int{64, 34, 25, 12, 22, 11, 90}
 	bubbleSort(ints)
-	println("Sorted integers:", ints)
+	fmt.Println("Sorted integers:", ints)
 
+	names := []string{"John", "Alice", "Bob", "Diana", "Armin"}
+	bubbleSort[string](names)
+	fmt.Println(names)
 }
